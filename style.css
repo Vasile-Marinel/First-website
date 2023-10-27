@@ -1,5 +1,11 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
 .container {
-    background-image: url('UFC.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(Images/UFC.jpg);
     height: 100vh;
     background-repeat: no-repeat;
     width: 100%;
@@ -7,9 +13,46 @@
     background-position: center;
   }
 
-  *{
-    margin: 0;
-    padding: 0;
-  }
-  
-  
+.navbar{
+  overflow: hidden;
+  width: 85%;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.UFC_Logo{
+  width: 190px;
+  cursor: pointer;
+}
+
+.navbar ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+
+.navbar ul li a{
+  text-decoration: none;
+  color: hsla(0, 90%, 43%, 0.674);
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.navbar ul li::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #009688;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+  width: 100%;
+}
